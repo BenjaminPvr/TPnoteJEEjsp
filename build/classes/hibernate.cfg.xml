@@ -30,7 +30,7 @@
 	    <!-- Liste des fichiers XML de mappage -->
 	    <mapping resource="beans.Activite.hbm.xml" />
 	    <mapping resource="beans.ClasseAge.hbm.xml" />
-	    <mapping resource="beans.Employee.hbm.xml" />
+	    <mapping resource="beans.Employe.hbm.xml" />
 	    <mapping resource="beans.Lieu.hbm.xml" />
 	    <mapping resource="beans.Offre.hmb.xml" />
 	    <mapping resource="beans.Pays.hmb.xml" />

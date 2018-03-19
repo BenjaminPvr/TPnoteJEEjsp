@@ -3,8 +3,8 @@
 "-//Hibernate/Hibernate Mapping DTD//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<class name="beans.EmployeBean" table="EMPLOYE">
-		<id column="idEmploye" name="idEmploye" type="java.lang.Integer">
+	<class name="beans.EmployeBean" table="Employe">
+		<id column="idEmploye" name="idEmploye" type="java.lang.Long">
 			<generator class="increment" />
 		</id>
 		<property column="nom" name="nom" type="java.lang.String" />
