@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Enregistrement</title>
+</head>
+<body>
+	<h1>Enregistrement d'un nouvel employé</h1>
+	<form method="post" action="RegisterLogin">
+	<a href="Login">Se connecter</a><br/><br/>
+	<p>
+		<table>
+			<tr>
+				<td>Nom : </td>
+				<td><input type="text" name="nom" /></td>
+			</tr>
+			<tr>
+				<td>Prénom : </td>
+				<td><input type="text" name="prenom" /></td>
+			</tr>
+			<tr>
+				<td>Date de naissance : </td>
+				<td><input type="date" name="dateNaissance" /></td>
+			</tr>
+			<tr>
+				<td>Identifiant : </td>
+				<td><input type="text" name="login" /></td>
+			</tr>
+			<tr>
+				<td>Mot de passe : </td>
+				<td><input type="password" name="mdp" /></td>
+			</tr>
+			<tr>
+				<td>Rythme de travail :</td>
+			</tr>
+			<tr>
+				<td><input type="radio" name="rythmeTravail" value="pleinTemps" checked="checked" /> Plein temps</td>
+				<td><input type="radio" name="rythmeTravail" value="tempsPartiel" /> Temps partiel</td>
+			</tr>
+		</table>
+		Adresse : <br/>
+		<textarea name="adresse" rows="3" cols="40"></textarea><br/>
+	</p>
+	<input type="submit" value="S'enregistrer" />
+	</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		
+		<!-- Propriétés Hibernate -->
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.MySQLDialect
+		</property>
+		
+		<property name = "hibernate.connection.driver_class">
+	        	com.mysql.jdbc.Driver
+	    </property>
+		    
+		<property name = "hibernate.connection.url">
+         jdbc:mysql://localhost/agencedb
+	    </property>
+	      
+	    <property name = "hibernate.connection.username">
+	         root
+	    </property>
+	      
+	    <property name = "hibernate.connection.password">
+	         password
+	    </property>
+	    
+	    <!-- Liste des fichiers XML de mappage -->
+	    <mapping resource="beans.Activite.hbm.xml" />
+	    <mapping resource="beans.ClasseAge.hbm.xml" />
+	    <mapping resource="beans.Employee.hbm.xml" />
+	    <mapping resource="beans.Lieu.hbm.xml" />
+	    <mapping resource="beans.Offre.hmb.xml" />
+	    <mapping resource="beans.Pays.hmb.xml" />
+	    <mapping resource="beans.PointInteret.hmb.xml" />
+	    <mapping resource="beans.PrixPasClasseAge.hmb.xml" />
+	    <mapping resource="beans.ProposeActivite.hmb.xml" />
+	    <mapping resource="beans.Reservation.hmb.xml" />
+	    <mapping resource="beans.ReservePlaces.hmb.xml" />
+	    
+	</session-factory>
+</hibernate-configuration>
