@@ -6,9 +6,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 15ea0bb... Merge branch 'master' of https://github.com/BenjaminPvr/TPnoteJEEjsp
 	<classpathentry kind="src" path="resources"/>
+=======
+>>>>>>> parent of 7276185... Modification beans
 =======
 >>>>>>> parent of 7276185... Modification beans
 =======
@@ -27,6 +30,7 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -54,6 +58,8 @@
 >>>>>>> parent of 7276185... Modification beans
 =======
 >>>>>>> parent of 15ea0bb... Merge branch 'master' of https://github.com/BenjaminPvr/TPnoteJEEjsp
+=======
+>>>>>>> parent of 7276185... Modification beans
 =======
 >>>>>>> parent of 7276185... Modification beans
 =======
