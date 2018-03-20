@@ -12,7 +12,8 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class CreateOffers
  */
 @WebServlet("/CreateOffers")
-public class CreateOffers extends HttpServlet {
+public class CreateOffers extends HttpServlet
+{
 	private static final long serialVersionUID = 1L;
 
     /**
@@ -21,6 +22,11 @@ public class CreateOffers extends HttpServlet {
     public CreateOffers() {
         // TODO Auto-generated constructor stub
     }
+    
+    public void init() throws ServletException
+    {
+    	super.init();
+    }
 
 
 	/**
@@ -28,7 +34,10 @@ public class CreateOffers extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 		System.out.println(request.getParameter("choix"));
+=======
+		//System.out.println(request.getParameter("choix"));
+>>>>>>> 1f4f09236d6346d5d618e74e22de5590e479656d
 	}
-
 }
