@@ -28,7 +28,7 @@ public class CreateOffers extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println(resquest.getParameter("choix"));
+		System.out.println(request.getParameter("choix"));
 	}
 
 }
