@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="beans.EmployeBean" table="Employe">
+		<id column="idEmploye" name="idEmploye" type="java.lang.Long">
+			<generator class="increment" />
+		</id>
+		<property column="nom" name="nom" type="java.lang.String" />
+		<property column="prenom" name="prenom" type="java.lang.String" />
+		<property column="login" name="login" type="java.lang.String" />
+		<property column="motDePasse" name="motDePasse" type="java.lang.String" />
+		<property column="dateNaissance" name="dateNaissance" type="java.lang.LocalDate" />
+		<property column="adresse" name="adresse" type="java.lang.String" />
+		<property column="pleinTemps" name="pleinTemps" type="java.lang.Boolean" />
+		
+	</class>
+</hibernate-mapping>
