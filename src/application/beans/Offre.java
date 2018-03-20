@@ -1,5 +1,6 @@
 package application.beans;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -25,10 +26,12 @@ public class Offre {
 	private Set<ClasseAge> prixParClasseAge;
 	
 	public Offre() {
+		prixParClasseAge = new HashSet<>(0);
 	}
 	
 	public Offre(String descriptionOffre, int nbPlacesTotales, int nbPlacesRestantes,
 			Employe employe, Lieu lieu) {
+		this();
 		this.descriptionOffre = descriptionOffre;
 		this.nbPlacesTotales = nbPlacesTotales;
 		this.nbPlacesRestantes = nbPlacesRestantes;

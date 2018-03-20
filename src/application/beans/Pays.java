@@ -1,5 +1,6 @@
 package application.beans;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -19,7 +20,7 @@ public class Pays {
 	private Set<Lieu> lieuxDansPays;
 	
 	public Pays() {
-		super();
+		lieuxDansPays = new HashSet<>(0);
 	}
 	
 	public Pays(long idPays, String nomPays, String commentairePays) {

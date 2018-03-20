@@ -17,12 +17,10 @@ public class PointInteret {
 	private Lieu lieu;
 	
 	public PointInteret() {
-		super();
 	}
 	
 	public PointInteret(long idPointInteret, String nomPointInteret, String commentairePointInteret,
 			Lieu lieu) {
-		super();
 		this.idPointInteret = idPointInteret;
 		this.nomPointInteret = nomPointInteret;
 		this.commentairePointInteret = commentairePointInteret;

@@ -10,6 +10,9 @@ public class ReservePlacesId implements Serializable {
 	private ClasseAge classeAge;
 	private Reservation reservation;
 	
+	public ReservePlacesId() {
+	}
+	
 	@ManyToOne
 	public ClasseAge getClasseAge() {
 		return classeAge;
@@ -25,15 +28,5 @@ public class ReservePlacesId implements Serializable {
 	public void setReservation(Reservation reservation) {
 		this.reservation = reservation;
 	}
-	
-	public boolean equals(Object o) {
-		if (this == o)
-			return true;
-		if (o == null || getClass() != o.getClass())
-			return false;
-		
-		ReservePlacesId objet = (ReservePlacesId) o;
-		)
-	}
-	
+
 }

@@ -1,5 +1,6 @@
 package application.beans;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -20,15 +21,19 @@ public class Lieu {
 	private Pays pays;
 	@OneToMany(mappedBy="PointInteret")
 	private Set<PointInteret> possedePointsInteret;
-	@OneToMany(mappedBy="Activite")
+	@OneToMany
 	private Set<Activite> proposeActivites;
 	@OneToMany(mappedBy="Offre")
 	private Set<Offre> disponibleDansOffres;
 	
 	public Lieu() {
+		possedePointsInteret = new HashSet<>(0);
+		proposeActivites = new HashSet<>(0);
+		disponibleDansOffres = new HashSet<>(0);
 	}
 	
 	public Lieu(String nomLieu, String commentaireLieu, Pays pays) {
+		this();
 		this.nomLieu = nomLieu;
 		this.commentaireLieu = commentaireLieu;
 		this.pays = pays;

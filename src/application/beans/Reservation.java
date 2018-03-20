@@ -1,13 +1,25 @@
 package application.beans;
 
 import java.sql.Date;
+import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
 public class Reservation {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long idReservation;
 	private Date dateReservation;
 	private String nomClient;
 	private String prenomClient;
 	private String adresseMail;
+	@OneToMany(mappedBy="clePrimaire.classeAge")
+	private Set<ReservePlaces> placesReservees;
 	
 	public Reservation() {
 		super();

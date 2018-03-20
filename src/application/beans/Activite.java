@@ -1,5 +1,6 @@
 package application.beans;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Entity;
@@ -18,9 +19,11 @@ public class Activite {
 	private Set<Lieu> disponibleDansLieux;
 	
 	public Activite() {
+		disponibleDansLieux = new HashSet<>(0);
 	}
 	
 	public Activite(String nomActivite) {
+		this();
 		this.nomActivite = nomActivite;
 	}
 

@@ -1,10 +1,14 @@
 package application.beans;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class ClasseAge {
@@ -16,15 +20,21 @@ public class ClasseAge {
 	private double prix;
 	@ManyToOne
 	private Offre offre;
+	@OneToMany(mappedBy="clePrimaire.reservation")
+	private Set<ReservePlaces> classesAge;
 	
 	
 
 	public ClasseAge() {
+		classesAge = new HashSet<>(0);
 	}
 	
-	public ClasseAge(int ageMin, int ageMax) {
+	public ClasseAge(int ageMin, int ageMax, double prix, Offre offre) {
+		this();
 		this.ageMin = ageMin;
 		this.ageMax = ageMax;
+		this.prix = prix;
+		this.offre = offre;
 	}
 
 	public long getIdClasseAge() {
