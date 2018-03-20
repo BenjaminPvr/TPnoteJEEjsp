@@ -3,7 +3,9 @@ package application.beans;
 import java.sql.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -18,7 +20,7 @@ public class Reservation {
 	private String nomClient;
 	private String prenomClient;
 	private String adresseMail;
-	@OneToMany(mappedBy="clePrimaire.classeAge")
+	@OneToMany(mappedBy="clePrimaire.classeAge", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private Set<ReservePlaces> placesReservees;
 	
 	public Reservation() {

@@ -3,7 +3,9 @@ package application.beans;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -20,7 +22,7 @@ public class ClasseAge {
 	private double prix;
 	@ManyToOne
 	private Offre offre;
-	@OneToMany(mappedBy="clePrimaire.reservation")
+	@OneToMany(mappedBy="clePrimaire.reservation", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private Set<ReservePlaces> classesAge;
 	
 	

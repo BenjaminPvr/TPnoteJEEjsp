@@ -3,7 +3,9 @@ package application.beans;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -15,7 +17,7 @@ public class Activite {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long idActivite;
 	private String nomActivite;
-	@OneToMany(mappedBy="Lieu")
+	@OneToMany(mappedBy="proposeActivites", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private Set<Lieu> disponibleDansLieux;
 	
 	public Activite() {

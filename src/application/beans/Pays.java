@@ -3,7 +3,9 @@ package application.beans;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,7 +18,7 @@ public class Pays {
 	private long idPays;
 	private String nomPays;
 	private String commentairePays;
-	@OneToMany(mappedBy="Lieu")
+	@OneToMany(mappedBy="pays", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private Set<Lieu> lieuxDansPays;
 	
 	public Pays() {
@@ -24,7 +26,7 @@ public class Pays {
 	}
 	
 	public Pays(long idPays, String nomPays, String commentairePays) {
-		super();
+		this();
 		this.idPays = idPays;
 		this.nomPays = nomPays;
 		this.commentairePays = commentairePays;

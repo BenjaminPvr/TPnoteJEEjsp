@@ -4,7 +4,9 @@ import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,7 +25,7 @@ public class Employe {
 	private Date dateNaissance;
 	private String adresse;
 	private boolean pleinTemps;
-	@OneToMany(mappedBy="Employe")
+	@OneToMany(mappedBy="employe", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	private Set<Offre> offresCrees;
 	
 	public Employe() {
@@ -32,6 +34,7 @@ public class Employe {
 	
 	public Employe(String nom, String prenom, String login, String motDePasse, Date dateNaissance,
 			String adresse, boolean pleinTemps) {
+		this();
 		this.nom = nom;
 		this.prenom = prenom;
 		this.login = login;
