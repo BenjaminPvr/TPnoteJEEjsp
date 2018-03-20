@@ -12,11 +12,11 @@
 		</property>
 		
 		<property name = "hibernate.connection.driver_class">
-	        	com.mysql.jdbc.Driver
+	        com.mysql.jdbc.Driver
 	    </property>
 		    
 		<property name = "hibernate.connection.url">
-         jdbc:mysql://localhost/agencedb
+         	jdbc:mysql://localhost/agencedb
 	    </property>
 	      
 	    <property name = "hibernate.connection.username">
@@ -28,17 +28,17 @@
 	    </property>
 	    
 	    <!-- Liste des fichiers XML de mappage -->
-	    <mapping resource="beans.Activite.hbm.xml" />
-	    <mapping resource="beans.ClasseAge.hbm.xml" />
-	    <mapping resource="beans.Employe.hbm.xml" />
-	    <mapping resource="beans.Lieu.hbm.xml" />
-	    <mapping resource="beans.Offre.hmb.xml" />
-	    <mapping resource="beans.Pays.hmb.xml" />
-	    <mapping resource="beans.PointInteret.hmb.xml" />
-	    <mapping resource="beans.PrixPasClasseAge.hmb.xml" />
-	    <mapping resource="beans.ProposeActivite.hmb.xml" />
-	    <mapping resource="beans.Reservation.hmb.xml" />
-	    <mapping resource="beans.ReservePlaces.hmb.xml" />
+	    <mapping resource="application.beans.Activite.hbm.xml" />
+	    <mapping resource="application.beans.ClasseAge.hbm.xml" />
+	    <mapping resource="application.beans.Employe.hbm.xml" />
+	    <mapping resource="application.beans.Lieu.hbm.xml" />
+	    <mapping resource="application.beans.Offre.hmb.xml" />
+	    <mapping resource="application.beans.Pays.hmb.xml" />
+	    <mapping resource="application.beans.PointInteret.hmb.xml" />
+	    <mapping resource="application.beans.PrixPasClasseAge.hmb.xml" />
+	    <mapping resource="application.beans.ProposeActivite.hmb.xml" />
+	    <mapping resource="application.beans.Reservation.hmb.xml" />
+	    <mapping resource="application.beans.ReservePlaces.hmb.xml" />
 	    
 	</session-factory>
 </hibernate-configuration>
