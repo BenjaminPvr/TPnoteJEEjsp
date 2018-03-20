@@ -1,15 +1,28 @@
-package beans;
+package application.beans;
 
-import java.util.Date;
+import java.sql.Date;
 
-public class ReservationBean {
+public class Reservation {
 	private long idReservation;
 	private Date dateReservation;
 	private String nomClient;
 	private String prenomClient;
 	private String adresseMail;
 	
+	public Reservation() {
+		super();
+	}
 	
+	public Reservation(long idReservation, Date dateReservation, String nomClient, String prenomClient,
+			String adresseMail) {
+		super();
+		this.idReservation = idReservation;
+		this.dateReservation = dateReservation;
+		this.nomClient = nomClient;
+		this.prenomClient = prenomClient;
+		this.adresseMail = adresseMail;
+	}
+
 	public long getIdReservation() {
 		return idReservation;
 	}
@@ -41,6 +54,4 @@ public class ReservationBean {
 		this.adresseMail = adresseMail;
 	}
 	
-	
-
 }

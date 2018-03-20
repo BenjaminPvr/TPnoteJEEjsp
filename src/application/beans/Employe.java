@@ -1,12 +1,19 @@
-package beans;
+package application.beans;
 
-import java.util.Date;
+import java.sql.Date;
+import java.util.Set;
 
-import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
-import org.hibernate.annotations.Type;
 
-public class EmployeBean {
+@Entity
+public class Employe {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long idEmployee;
 	private String nom;
 	private String prenom;
@@ -14,10 +21,23 @@ public class EmployeBean {
 	private String motDePasse;
 	private Date dateNaissance;
 	private String adresse;
-	@Column(name = "pleinTemps", nullable = false)
-	@Type(type = "org.hibernate.type.NumericBooleanType")
 	private boolean pleinTemps;
+	@OneToMany(mappedBy="Employe")
+	private Set<Offre> offresCrees;
 	
+	public Employe() {
+	}
+	
+	public Employe(String nom, String prenom, String login, String motDePasse, Date dateNaissance,
+			String adresse, boolean pleinTemps) {
+		this.nom = nom;
+		this.prenom = prenom;
+		this.login = login;
+		this.motDePasse = motDePasse;
+		this.dateNaissance = dateNaissance;
+		this.adresse = adresse;
+		this.pleinTemps = pleinTemps;
+	}
 	
 	public long getIdEmployee() {
 		return idEmployee;
@@ -67,5 +87,11 @@ public class EmployeBean {
 	public void setPleinTemps(boolean pleinTemps) {
 		this.pleinTemps = pleinTemps;
 	}
-
+	public Set<Offre> getOffresCrees() {
+		return offresCrees;
+	}
+	public void setOffresCrees(Set<Offre> offresCrees) {
+		this.offresCrees = offresCrees;
+	}
+	
 }
